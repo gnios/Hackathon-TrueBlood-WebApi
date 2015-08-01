@@ -11,6 +11,11 @@ namespace TrueBlood
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                      "~/Scripts/angular-resource.js",
+                      "~/Scripts/angular-route.js",
+                      "~/Scripts/angular.min.js"));
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
@@ -21,8 +26,14 @@ namespace TrueBlood
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/css/bootstrap.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/app").IncludeDirectory("~/app", "*.js", true));
+
+            // Tema Freelancer
+            bundles.Add(new StyleBundle("~/Content/temaFreelancer").IncludeDirectory("~/Content/", "*.css", true));
+
+            bundles.Add(new ScriptBundle("~/bundles/temaFreelancer").IncludeDirectory("~/Scripts/Tema/", "*.js", true));
         }
     }
 }

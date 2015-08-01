@@ -1,0 +1,13 @@
+var pacientes = function ($scope, $http) {
+
+ $scope.paciente = [];
+ $scope.pacienteExiste = false;
+
+$scope.getPacientes = function (event) {
+             
+        $http.get(utils.urlWithTimestamp('/api/pacientes?paciente=' event.target.value)).success(function (data) {
+            $scope.paciente = data;
+            scope.pacienteExiste = true;
+        });
+    };
+}

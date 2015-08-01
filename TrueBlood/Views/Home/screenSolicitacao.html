@@ -1,0 +1,31 @@
+<section id="screenSolicitante" ng-controller="sscreenSolicitante">
+
+	<div id="cadPaciente">
+
+		<form>
+			<label for="cidade"> Cidade </label>
+			<input type="text" id="cidade" ng-model="paciente.cidade" required="true" />
+
+			<label for="hospital"> Hospital </label>
+			<input type="text" id="hospital" ng-model="paciente.hospital" required="true" />
+			
+			<label for="pessoa"> Pessoa </label>
+			<input type="text" id="pessoa" ng-model="paciente.pessoa" required="true" />
+			
+			<label for="tpSanguineo"> Tipo sanguíneo </label>
+			<select  id="pessoa" ng-model="paciente.tpSanguineo" required="true" ng-options="tpSanguineo.cod as tpSanguineo.name for tpSanguineo in hospital.tpSanguineo"> 
+			</select>
+
+			<label for="qtBolsas"> Quantidade de bolsas </label>
+			<input type="number" id="qtBolsas" ng-model="paciente.qtBolsas" required="true" />
+			
+			<label for="email"> Email </label>
+			<input type="text" id="email" ng-model="paciente.email" />
+
+
+			<input type="button" value="Salvar" ng-click="solicitacao.salvar">
+		</form>
+		
+	</div>
+	
+</section>

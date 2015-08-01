@@ -2,30 +2,40 @@
 
 	<div id="cadPaciente">
 
-		<form>
-			<label for="cidade"> Cidade </label>
-			<input type="text" id="cidade" ng-model="paciente.cidade" required="true" />
-
-			<label for="hospital"> Hospital </label>
-			<input type="text" id="hospital" ng-model="paciente.hospital" required="true" />
+		<form ng-submit="solicitacao.salvar">
 			
-			<label for="pessoa"> Pessoa </label>
-			<input type="text" id="pessoa" ng-model="paciente.pessoa" required="true" />
-			
-			<label for="tpSanguineo"> Tipo sanguíneo </label>
-			<select  id="pessoa" ng-model="paciente.tpSanguineo" required="true" ng-options="tpSanguineo.cod as tpSanguineo.name for tpSanguineo in hospital.tpSanguineo"> 
-			</select>
+			div class="form-group">
+				<label for="pessoa"> Nome do Paciente </label>
+				<input type="text" id="pessoa" ng-model="paciente.pessoa" required="true" ng-change="getPacientes($event)" />
+			</div>
 
-			<label for="qtBolsas"> Quantidade de bolsas </label>
-			<input type="number" id="qtBolsas" ng-model="paciente.qtBolsas" required="true" />
+			<div class="form-group">
+				<label for="cidade"> Cidade </label>
+				<input type="text" id="cidade" ng-model="paciente.cidade" required="true" placeholder="Informe a Cidade" ng-disabled="pacienteExiste == true" />
+			<div>
+
+			<div class="form-group">
+				<label for="hospital"> Hospital </label>
+				<input type="text" id="hospital" ng-model="paciente.hospital" required="true" placeholder="Informe o Hospital" ng-disabled="pacienteExiste == true"/>
+			</div>
+
+
+			<div class="form-group">
+				<label for="tpSanguineo"> Tipo sanguíneo </label>
+				<select  id="pessoa" ng-model="paciente.tpSanguineo" required="true" ng-options="tpSanguineo.cod as tpSanguineo.name for tpSanguineo in hospital.tpSanguineo" ng-disabled="pacienteExiste == true"> 
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="qtBolsas"> Quantidade de bolsas </label>
+				<input type="number" id="qtBolsas" ng-model="paciente.qtBolsas" required="true"  placeholder="Informe a Quantidade de bolsas" ng-disabled="pacienteExiste == true" />
+			</div>
 			
 			<label for="email"> Email </label>
-			<input type="text" id="email" ng-model="paciente.email" />
+			<input type="text" id="email" ng-model="paciente.email" placeholder="Informe o Email" ng-disabled="pacienteExiste == true" />
 
-
-			<input type="button" value="Salvar" ng-click="solicitacao.salvar">
+			<button type="submit" class="btn btn-primary">Salvar</button>
 		</form>
 		
 	</div>
-	
+
 </section>

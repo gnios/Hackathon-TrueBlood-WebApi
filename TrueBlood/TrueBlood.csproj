@@ -159,18 +159,24 @@
     <Compile Include="Controllers\CrudController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ICrudController.cs" />
+    <Compile Include="Controllers\HospitalController.cs" />
+    <Compile Include="Controllers\SolicitacaoController.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Cidade.cs" />
+    <Compile Include="Models\EnumTipoSangue.cs" />
     <Compile Include="Models\Paciente.cs" />
     <Compile Include="Models\Hospital.cs" />
+    <Compile Include="Models\Solicitacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\HospitaRepository.cs" />
     <Compile Include="Repositories\PacienteRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\SolicitacaoRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />

@@ -1,6 +1,6 @@
 ﻿namespace TrueBlood.Models
 {
-    public class Hospital
+    public class Hospital : BaseModel
     {
         public string Nome { get; set; }
     }

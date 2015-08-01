@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="donateBlood">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -8,7 +8,7 @@
     @Styles.Render("~/Content/temaFreelancer")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body id="page-top" class="index">
+<body id="page-top" class="index" ng-controller="PatientListCtrl">
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")

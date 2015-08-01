@@ -3,7 +3,7 @@ var app = angular.module('donateBlood', ['ngRoute','ngResource'])
     .config(['$routeProvider', function($routeProvider){
 
         $routeProvider.when('/', {
-            template:'<h4></h4>'
+            controller: 'PatientListCtrl'
         })
 
         .when('/doar/',{

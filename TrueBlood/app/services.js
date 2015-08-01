@@ -1,7 +1,7 @@
 app.factory('PatientService', ['$http',function($http) {
         return {
             all: function(){
-                return $http.get('http://donateblood.dev/fake.json')
+                return $http.get('api/solicitacao/listar')
                     .success(function(data){
                        return data;
                 })
